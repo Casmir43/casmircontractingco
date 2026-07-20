@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casmir Contracting Company | LLC — Test Website</title>
+  <style>
+    :root {
+      --ink:#080b10; --charcoal:#1f2224; --navy:#101b2b; --blue:#587895;
+      --gold:#d7b56d; --bronze:#b88746; --cream:#f6efe3; --paper:#f7f4ee;
+      --muted:#716b62; --red:#b71822; --line:rgba(8,11,16,.14);
+      --sage:#6f7652; --olive:#48523a; --soil:#3a3027; --sand:#efe4cf;
+      --shadow:0 30px 80px rgba(8,11,16,.22);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Avenir,"Wix Madefor Text",Inter,Arial,sans-serif;line-height:1.55} a{color:inherit}
+    .site{overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(111,118,82,.10),transparent 28%),radial-gradient(circle at 88% 42%,rgba(184,135,70,.10),transparent 30%),linear-gradient(180deg,#fff 0%,#f4ecdd 38%,#fff 100%)}
+    .top{position:absolute;z-index:10;top:24px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 40px));display:flex;align-items:center;justify-content:space-between;gap:22px;color:#fff;padding:10px 12px 10px 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(8,11,16,.42);backdrop-filter:blur(14px);box-shadow:0 18px 54px rgba(0,0,0,.28)}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none;font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:12px;line-height:1.22}.brand img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}.brand span{max-width:none;white-space:nowrap}
+    .nav{display:flex;align-items:center;gap:4px;background:transparent;border:0;backdrop-filter:none}
+    .nav a{display:grid;place-items:center;min-width:auto;padding:13px 16px;text-decoration:none;border:0;border-radius:999px;font-weight:900;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.86)}.nav a:hover{background:rgba(215,181,109,.18);color:#fff}
+    .hero{min-height:76vh;position:relative;display:grid;align-items:center;color:#fff;overflow:hidden;background:#080b10}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;filter:saturate(.95) contrast(1.06) brightness(.92);transform:scale(1.04);transform-origin:center center}.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.46),rgba(0,0,0,.16)),linear-gradient(180deg,rgba(16,27,43,.16),rgba(8,11,16,.72))}.hero>*:not(.hero-video){position:relative;z-index:2}
+    .hero-inner{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:76px 0 36px}.eyebrow{margin:0 0 18px;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.24em;text-transform:uppercase}.eyebrow:before{content:"";display:inline-block;width:42px;height:2px;background:currentColor;margin-right:13px;vertical-align:middle}
+    h1,h2,h3{margin:0;line-height:1.02}.hero h1{max-width:840px;font-size:clamp(44px,6.6vw,92px);letter-spacing:-.055em;font-weight:900}.hero h1 em{display:block;font-family:Georgia,serif;color:#e6d6bc;font-weight:400}.hero p{max-width:720px;margin:26px 0 32px;color:rgba(255,255,255,.88);font-size:clamp(17px,2vw,22px)}
+    .actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;text-decoration:none;border:1px solid transparent;font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 16px 42px rgba(215,181,109,.28)}.btn-dark{background:var(--charcoal);color:#fff}.btn-outline{border-color:rgba(255,255,255,.38);color:#fff}.btn-red{background:var(--gold);color:var(--ink);box-shadow:0 16px 42px rgba(215,181,109,.28)}.btn:hover{transform:translateY(-2px)}
+    .social-proof{position:absolute;right:clamp(18px,4vw,54px);bottom:clamp(18px,3vw,34px);display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;color:rgba(255,255,255,.92);font-weight:900;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.social-proof span{display:flex;gap:7px;align-items:center;padding:9px 12px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(8,11,16,.44);backdrop-filter:blur(8px)}
+    section{padding:clamp(72px,9vw,126px) clamp(18px,5vw,68px)}.inner{width:min(1180px,100%);margin:0 auto}.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;min-height:520px;background:linear-gradient(135deg,#fff 0%,#fbf6eb 62%,rgba(111,118,82,.10) 100%)}.intro h2{font-size:clamp(42px,5vw,76px);letter-spacing:-.035em;text-transform:uppercase}.intro p{color:var(--muted);font-size:18px;border-bottom:1px solid rgba(111,118,82,.26);padding-bottom:42px}.title-row{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end;margin-bottom:42px}.title-row h2{font-size:clamp(42px,6vw,86px);letter-spacing:-.052em}.title-row h2 em{display:block;font-family:Georgia,serif;color:var(--blue);font-weight:400}.title-row p{color:var(--muted);font-size:17px}
+    .services{background:linear-gradient(135deg,#eee8dc 0%,#f7f2e8 55%,rgba(111,118,82,.12) 100%)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}.service{min-height:430px;border-right:1px solid rgba(8,11,16,.12);border-bottom:1px solid rgba(8,11,16,.12);background:linear-gradient(180deg,#fff 0%,#f8f1e5 72%,rgba(111,118,82,.08) 100%);overflow:hidden}.service:nth-child(3n){border-right:0}.service:nth-last-child(-n+3){border-bottom:0}.service-media{position:relative;height:190px;overflow:hidden;background:#111}.service-media img:first-child{width:100%;height:100%;object-fit:cover;display:block;transition:transform .28s ease}.service:hover .service-media img:first-child{transform:scale(1.04)}.service-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(111,118,82,.04),rgba(58,48,39,.42))}.service-body{padding:28px 30px 30px}.small{color:var(--red);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.service h3{margin:18px 0 13px;font-size:29px;letter-spacing:-.025em}.service p{color:var(--muted);margin:0 0 24px}.text-link{font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--navy)}
+    .mission{background:radial-gradient(circle at 8% 12%,rgba(111,118,82,.18),transparent 30%),linear-gradient(135deg,var(--navy) 0%,#142033 52%,#20281f 100%);color:#fff}.mission-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:70px;align-items:center}.mission-img{min-height:620px;background:linear-gradient(180deg,rgba(16,27,43,.02) 0%,rgba(16,27,43,.18) 54%,rgba(16,27,43,.68) 100%),url("site-images/mission-portrait-casmir.png?v=20260719-022651") center top/cover no-repeat;box-shadow:22px 22px 0 rgba(215,181,109,.14),0 28px 70px rgba(0,0,0,.28);border:1px solid rgba(215,181,109,.18)}.mission h2{font-size:clamp(44px,6vw,88px);letter-spacing:-.052em}.mission h2 em{font-family:Georgia,serif;color:var(--gold);font-weight:400}.mission p{color:rgba(246,239,227,.8);font-size:18px}.pill-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);margin:30px 0}.pill-grid span{padding:16px 12px;text-align:center;border-right:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.pill-grid span:last-child{border-right:0}
+    .areas{background:linear-gradient(180deg,#fff 0%,#fbf7ef 48%,#fff 100%);text-align:center}.area-feature{min-height:320px;display:grid;place-items:center;padding:34px;color:#fff;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.62)),url("https://static.wixstatic.com/media/11062b_823d879744784d04814300a35a23f36a~mv2.jpg/v1/fill/w_1300,h_620,al_c,q_85,enc_avif,quality_auto/11062b_823d879744784d04814300a35a23f36a~mv2.jpg") center/cover no-repeat}.area-feature h3{font-size:clamp(46px,7vw,92px);font-family:Georgia,serif;text-shadow:0 12px 34px rgba(0,0,0,.44)}.county-logo-carousel{margin-top:54px;padding:34px 0 18px;overflow:hidden;background:#fff}.county-logo-carousel h3{font-size:clamp(38px,5vw,62px);letter-spacing:-.035em;text-transform:uppercase}.county-kicker{margin:8px 0 32px;color:var(--muted);font-size:13px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.county-logo-track{display:none;align-items:center;gap:58px;width:max-content;animation:logoMarquee 48s linear infinite}.county-logo-track.active{display:flex}.county-logo-carousel:hover .county-logo-track{animation-play-state:paused}.town-logo{min-width:150px;display:grid;place-items:center;gap:12px;filter:grayscale(.08);opacity:.95}.town-mark{width:92px;height:92px;border:1px solid rgba(8,11,16,.12);border-radius:24px;display:grid;place-items:center;background:linear-gradient(180deg,#fff,#f3f0ea);box-shadow:0 18px 40px rgba(8,11,16,.08);position:relative;overflow:hidden}.town-mark:before{content:"";position:absolute;inset:11px;border:2px solid rgba(215,181,109,.55);border-radius:50%}.town-mark:after{content:attr(data-initials);position:relative;color:var(--navy);font-family:Georgia,serif;font-size:32px;font-weight:900;letter-spacing:-.08em}.logo-frame{width:190px;height:112px;display:grid;place-items:center;background:#fff}.logo-frame img{max-width:180px;max-height:96px;width:auto;height:auto;object-fit:contain;display:block}.logo-wide .logo-frame{width:230px}.logo-wide .logo-frame img{max-width:220px}.town-logo.logo-wide{min-width:245px}.town-logo.logo-image{min-width:205px}.town-logo span{color:#313131;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.county-dot-labels{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:34px}.county-tab{border:1px solid rgba(8,11,16,.14);background:#fff;color:var(--ink);padding:12px 18px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}.county-tab.active{background:var(--red);border-color:var(--red);color:#fff}.area-note{max-width:760px;margin:26px auto 0;color:var(--muted);font-size:14px}@keyframes logoMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cred{background:#f3f0ea}.cred-grid{display:grid;grid-template-columns:.85fr 1.15fr;min-height:560px}.cred-copy{padding:60px;background:#fff}.cred-copy h2{font-size:clamp(36px,4.5vw,64px);letter-spacing:-.035em;text-transform:uppercase}.stars{color:#f5b300;letter-spacing:4px;margin:30px 0 18px}.cred-copy p{color:var(--muted)}.cred-panel{position:relative;overflow:hidden;background:linear-gradient(135deg,#101b2b,#1f2224 52%,#75552d);display:grid;place-items:center;color:#fff;padding:clamp(26px,4vw,54px)}.review-carousel{width:100%;max-width:760px}.review-slide{display:none;animation:reviewFade .55s ease}.review-slide.active{display:block}.review-card{border:1px solid rgba(215,181,109,.34);border-radius:30px;background:rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(0,0,0,.32);padding:clamp(26px,4vw,44px)}.review-card blockquote{margin:0;color:rgba(255,255,255,.92);font-size:clamp(16px,1.8vw,20px);line-height:1.72}.review-card cite{display:block;margin-top:24px;color:var(--gold);font-style:normal;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.review-meta{margin-top:4px;color:rgba(255,255,255,.66);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.review-controls{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px}.review-dot{width:12px;height:12px;border-radius:999px;border:1px solid rgba(215,181,109,.75);background:transparent;cursor:pointer}.review-dot.active{background:var(--gold);box-shadow:0 0 0 6px rgba(215,181,109,.16)}@keyframes reviewFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .contact{background:linear-gradient(180deg,#fff 0%,#f7efe1 100%);text-align:center}.contact h2{font-size:clamp(44px,6vw,78px);text-transform:uppercase;letter-spacing:-.025em}.contact p{color:var(--muted)}.contact-card{margin:36px auto 0;max-width:760px;text-align:left;background:linear-gradient(135deg,var(--ink),#171d16);color:#fff;border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:var(--shadow),0 0 0 1px rgba(215,181,109,.10)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:8px;margin-bottom:14px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);color:#fff;padding:15px;font:inherit}select option{color:#111}textarea{min-height:120px}.status{min-height:24px;color:var(--gold);font-weight:800}
+    footer{background:#252525;color:rgba(255,255,255,.72);padding:54px clamp(18px,5vw,68px)}.foot{width:min(1180px,100%);margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr .8fr .8fr;gap:36px}.foot img{width:145px;background:transparent;padding:0;filter:drop-shadow(0 12px 24px rgba(0,0,0,.28))}.foot h3{color:#fff;text-transform:uppercase;font-size:18px}.foot a{color:var(--gold);text-decoration:none}.foot a.btn{color:var(--ink)}.operation-hours{margin-top:28px}.operation-hours h3{margin-bottom:12px}.operation-hours p{margin:0;color:rgba(255,255,255,.72);line-height:1.72}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;font-size:12px;color:rgba(255,255,255,.48)}
+
+    /* Natural Central Texas greenery detail pass: restrained CSS-only polish, no asset/font/carousel changes. */
+    .site{
+      background:
+        radial-gradient(circle at 8% 14%,rgba(116,122,78,.13),transparent 24%),
+        radial-gradient(circle at 82% 34%,rgba(154,122,72,.12),transparent 26%),
+        radial-gradient(circle at 18% 78%,rgba(78,88,58,.08),transparent 22%),
+        linear-gradient(180deg,#fff 0%,#f5efe2 34%,#fbf7ef 70%,#fff 100%);
+    }
+    .intro,.services,.areas,.contact{position:relative;overflow:hidden}
+    .intro:before,.services:before,.areas:before,.contact:before{
+      content:"";position:absolute;inset:0;pointer-events:none;opacity:.72;
+      background:
+        radial-gradient(ellipse at 12% 28%,rgba(101,111,72,.105),transparent 30%),
+        radial-gradient(ellipse at 88% 72%,rgba(201,181,132,.18),transparent 28%),
+        linear-gradient(120deg,rgba(255,255,255,.42),transparent 44%,rgba(111,118,82,.055));
+      mix-blend-mode:multiply;
+    }
+    .intro>.inner,.services>.inner,.areas>.inner,.contact>.inner{position:relative;z-index:1}
+    .intro{
+      background:
+        linear-gradient(135deg,#fff 0%,#fbf5e8 58%,rgba(124,131,83,.14) 100%);
+    }
+    .services{
+      background:
+        radial-gradient(circle at 5% 12%,rgba(88,104,63,.14),transparent 22%),
+        radial-gradient(circle at 96% 28%,rgba(181,139,79,.12),transparent 24%),
+        linear-gradient(135deg,#ece5d7 0%,#f8f2e6 58%,#efe4d0 100%);
+    }
+    .service-grid{border-color:rgba(77,88,58,.18);box-shadow:0 34px 90px rgba(58,48,39,.18)}
+    .service{
+      background:
+        linear-gradient(180deg,#fff 0%,#fbf5e9 66%,rgba(118,127,82,.10) 100%);
+    }
+    .service:nth-child(odd){background:linear-gradient(180deg,#fff 0%,#faf2e3 68%,rgba(162,139,91,.10) 100%)}
+    .service-media{background:#1a1a14}
+    .service-media img:first-child{filter:saturate(.92) contrast(1.04) brightness(.98) sepia(.035)}
+    .service-media:after{
+      background:
+        linear-gradient(180deg,rgba(74,88,52,.05) 0%,rgba(46,55,35,.16) 48%,rgba(58,48,39,.46) 100%),
+        radial-gradient(circle at 16% 20%,rgba(216,197,145,.12),transparent 34%);
+    }
+    .service-body{background:linear-gradient(180deg,rgba(255,255,255,.76),rgba(247,239,225,.84))}
+    .small{color:#ad2028}.text-link{color:#111b28}.text-link:hover{color:#7b5d25}
+    .mission{
+      background:
+        radial-gradient(circle at 8% 12%,rgba(117,127,82,.22),transparent 30%),
+        radial-gradient(circle at 86% 72%,rgba(177,135,70,.18),transparent 32%),
+        linear-gradient(135deg,var(--navy) 0%,#142033 48%,#1d2a21 100%);
+    }
+    .mission-img{filter:saturate(.96) contrast(1.03);box-shadow:22px 22px 0 rgba(139,129,86,.22),0 28px 70px rgba(0,0,0,.30)}
+    .mission p{color:rgba(246,239,227,.84)}
+    .areas{
+      background:
+        radial-gradient(circle at 18% 20%,rgba(111,118,82,.09),transparent 26%),
+        linear-gradient(180deg,#fff 0%,#fbf7ef 46%,#fff 100%);
+    }
+    .area-feature{
+      border:1px solid rgba(111,118,82,.16);
+      box-shadow:0 24px 70px rgba(58,48,39,.14);
+      background:
+        linear-gradient(180deg,rgba(22,28,25,.03),rgba(0,0,0,.56)),
+        linear-gradient(90deg,rgba(111,118,82,.16),transparent 44%,rgba(215,181,109,.12)),
+        url("https://static.wixstatic.com/media/11062b_823d879744784d04814300a35a23f36a~mv2.jpg/v1/fill/w_1300,h_620,al_c,q_85,enc_avif,quality_auto/11062b_823d879744784d04814300a35a23f36a~mv2.jpg") center/cover no-repeat;
+    }
+    .county-logo-carousel{background:linear-gradient(180deg,#fff 0%,#fdfaf4 100%);box-shadow:0 20px 60px rgba(58,48,39,.07)}
+    .logo-frame{background:linear-gradient(180deg,#fff,#f8f3ea)}
+    .contact{
+      background:
+        radial-gradient(circle at 18% 20%,rgba(111,118,82,.10),transparent 26%),
+        radial-gradient(circle at 82% 74%,rgba(184,135,70,.13),transparent 30%),
+        linear-gradient(180deg,#fff 0%,#f8efe0 100%);
+    }
+    .contact-card{background:linear-gradient(135deg,var(--ink),#121b15 58%,#222819);box-shadow:var(--shadow),0 0 0 1px rgba(215,181,109,.15)}
+
+    /* Smooth Central Texas vegetation feel v2: slightly more natural detail while preserving the clean premium layout. */
+    .intro:after,.services:after,.areas:after,.contact:after{
+      content:"";position:absolute;inset:0;pointer-events:none;opacity:.30;z-index:0;
+      background-image:
+        repeating-linear-gradient(108deg,rgba(82,96,57,.10) 0 1px,transparent 1px 18px),
+        repeating-linear-gradient(64deg,rgba(196,174,120,.10) 0 1px,transparent 1px 24px);
+      mask-image:radial-gradient(ellipse at 12% 78%,#000 0%,transparent 34%),radial-gradient(ellipse at 91% 18%,#000 0%,transparent 30%);
+    }
+    .services:after{opacity:.42;mask-image:radial-gradient(ellipse at 5% 18%,#000 0%,transparent 32%),radial-gradient(ellipse at 92% 76%,#000 0%,transparent 36%)}
+    .areas:after{opacity:.24;mask-image:radial-gradient(ellipse at 12% 18%,#000 0%,transparent 34%),radial-gradient(ellipse at 86% 74%,#000 0%,transparent 32%)}
+    .service-grid,.county-logo-carousel,.contact-card{position:relative;z-index:1}
+    .service-grid:before,.county-logo-carousel:before{
+      content:"";position:absolute;pointer-events:none;inset:-1px;z-index:0;
+      background:linear-gradient(90deg,rgba(111,118,82,.10),transparent 22%,transparent 78%,rgba(184,135,70,.08));
+    }
+    .service-grid>*{position:relative;z-index:1}
+    .service-body{position:relative;overflow:hidden}
+    .service-body:after{
+      content:"";position:absolute;right:-42px;bottom:-48px;width:150px;height:150px;pointer-events:none;opacity:.16;
+      background:radial-gradient(ellipse at center,rgba(105,116,73,.55),transparent 62%);
+      filter:blur(2px);transform:rotate(-14deg);
+    }
+    .mission:after{
+      content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
+      background:radial-gradient(ellipse at 12% 88%,rgba(123,132,82,.52),transparent 28%),radial-gradient(ellipse at 92% 16%,rgba(210,179,113,.24),transparent 32%);
+    }
+    .mission{position:relative;overflow:hidden}.mission>.inner{position:relative;z-index:1}
+
+    /* Transparent city/town logo frames on a clean white carousel panel. */
+    .county-logo-carousel{background:#fff!important;box-shadow:none}
+    .logo-frame,.logo-wide .logo-frame{background:transparent!important;box-shadow:none!important;border:0!important;width:210px;height:116px}
+    .logo-frame img{filter:none}
+    .town-logo{filter:none;opacity:.98}
+
+    /* Clickable service cards */
+    .service-link-card{cursor:pointer;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+    .service-link-card:hover,.service-link-card:focus-visible{transform:translateY(-4px);box-shadow:0 34px 90px rgba(58,48,39,.20);outline:2px solid rgba(215,181,109,.45);outline-offset:-2px}
+
+    /* Real anchor service cards */
+    .service-grid a.service{display:block;color:inherit;text-decoration:none}
+    .service-grid a.service .text-link{display:inline-block}
+
+    /* Paper-white Cities & Towns block: no cream tint, no panel shadows. */
+    #areas .county-logo-carousel{background:#fff!important;background-image:none!important;box-shadow:none!important;border:0!important}
+    #areas .county-logo-carousel:before,#areas .county-logo-carousel:after{display:none!important;content:none!important}
+    #areas .logo-frame,#areas .logo-wide .logo-frame{background:transparent!important;background-image:none!important;box-shadow:none!important;border:0!important}
+
+    /* Paper-white city logo blend: hides baked-in white logo rectangles by matching the carousel field. */
+    #areas,
+    .areas,
+    #areas .inner,
+    .county-logo-carousel,
+    .county-logo-carousel .logo-track,
+    .county-logo-carousel .logo-frame{
+      background:transparent !important;
+      background-color:transparent !important;
+      background-image:none !important;
+    }
+    .county-logo-carousel{
+      box-shadow:none !important;
+      border:0 !important;
+      outline:0 !important;
+    }
+    .county-logo-carousel:before,
+    .county-logo-carousel:after{
+      background:linear-gradient(90deg,#fff,rgba(255,255,255,0)) !important;
+    }
+    .county-logo-carousel:after{transform:rotate(180deg)}
+    .logo-frame{
+      box-shadow:none !important;
+      border-color:transparent !important;
+    }
+
+    /* Transparentized city logo assets: no baked-white cards or logo rectangle shadows. */
+    #areas .county-logo-carousel{background:transparent !important;background-color:transparent !important;background-image:none !important;box-shadow:none !important;border:0 !important;}
+    #areas .county-logo-carousel:before,#areas .county-logo-carousel:after{display:none !important;content:none !important;}
+    #areas .logo-frame,#areas .logo-wide .logo-frame{background:transparent !important;background-image:none !important;box-shadow:none !important;border:0 !important;}
+    #areas .logo-frame img{background:transparent !important;filter:none !important;mix-blend-mode:normal;}
+
+    /* Blend city/town carousel into warm cream field now that logos are transparentized. */
+    #areas,
+    .areas{
+      background:linear-gradient(180deg,#fff 0%,#f8f2e6 48%,#f1eadc 100%) !important;
+      background-color:#f4ecdd !important;
+      background-image:radial-gradient(circle at 14% 20%,rgba(111,118,82,.07),transparent 28%),radial-gradient(circle at 86% 80%,rgba(215,181,109,.10),transparent 30%),linear-gradient(180deg,#fff 0%,#f8f2e6 48%,#f1eadc 100%) !important;
+    }
+    #areas .inner{background:transparent !important;background-image:none !important;}
+    #areas .county-logo-carousel{
+      background:transparent !important;
+      background-color:transparent !important;
+      background-image:none !important;
+      box-shadow:none !important;
+      border:0 !important;
+      padding-top:34px;
+      padding-bottom:18px;
+    }
+    #areas .county-logo-carousel:before,#areas .county-logo-carousel:after{display:none !important;content:none !important;}
+    #areas .logo-frame,#areas .logo-wide .logo-frame{background:transparent !important;background-image:none !important;box-shadow:none !important;border:0 !important;}
+    #areas .logo-frame img{background:transparent !important;filter:none !important;mix-blend-mode:normal;}
+    @media(max-width:900px){.top{top:14px;width:calc(100% - 28px);padding:9px 12px;border-radius:24px}.brand span{white-space:normal;max-width:230px}.nav{display:none}.hero-inner{padding-top:120px}.social-proof{display:none}.intro,.title-row,.mission-grid,.cred-grid,.foot{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:1fr}.county-logo-track{gap:34px}.town-logo{min-width:132px}.service,.service:nth-child(3n){border-right:0}.service:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.form-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main class="site">
+  <header class="top"><a class="brand" href="#top"><img src="https://static.wixstatic.com/media/446b11_1d105aec4d414511a16e44543f453737~mv2.png/v1/fill/w_144,h_182,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-04-27%20170753_edited_edit.png" alt="Casmir lion logo"><span>Casmir Contracting Company | LLC</span></a><nav class="nav"><a href="#top">Home</a><a href="#services">What We Do</a><a href="#areas">Service Area</a><a href="about-us.html">About Us</a><a href="#contact">Contact Us</a></nav></header>
+  <section class="hero" id="top"><video class="hero-video" autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/49189/49189-thumb-720-2.jpg"><source src="https://assets.mixkit.co/videos/49189/49189-720.mp4" type="video/mp4"></video><div class="hero-inner"><p class="eyebrow">Veteran Family Owned • Central Texas</p><h1>Where Every Build Begins.</h1><p>Casmir Contracting Company | LLC delivers dependable sitework solutions—including land clearing, excavation, grading, drainage, hauling, and site preparation—across Bell, Williamson, and Travis counties.</p><div class="actions"><a class="btn btn-gold" href="#contact">Request a Free Estimate</a><a class="btn btn-dark" href="#services">View Services</a><a class="btn btn-outline" href="tel:+15129673242">Call Casmir</a></div></div><div class="social-proof"><span>Bell County</span><span>Williamson County</span><span>Travis County</span></div></section>
+  <section class="intro"><div class="inner" style="display:contents"><h2>Hard work.<br>Honest results.</h2><p>Casmir Contracting Company is a local, veteran- and family-owned contractor focused on practical sitework, clear communication, and dependable service from estimate to completion.</p></div></section>
+  <section class="services" id="services"><div class="inner"><div class="title-row"><div><p class="eyebrow">What We Do</p><h2>From raw land to construction-ready.</h2></div><p>Our service pages provide a clear overview of Casmir’s capabilities, helping clients identify the right solution and take the next step toward a project estimate.</p></div><div class="service-grid">
+    <a class="service service-link-card" href="service-land-clearing-vegetation-management.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Land Clearing &amp; Vegetation Management"><div class="service-media"><img src="https://static.wixstatic.com/media/11062b_07b3485bc330407b8ffc9a3a88a7f5a6~mv2.jpg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/11062b_07b3485bc330407b8ffc9a3a88a7f5a6~mv2.jpg" alt="Yellow bulldozer forest"></div><div class="service-body"><span class="small">SITE OPENING</span><h3>Land Clearing & Vegetation Management</h3><p>Brush removal, tree clearing, and site opening for residential, commercial, and development properties.</p><span class="text-link">Learn More →</span></div></a>
+    <a class="service service-link-card" href="service-excavation-earthwork.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Excavation &amp; Earthwork"><div class="service-media"><img src="https://static.wixstatic.com/media/11062b_7c13d53ba87a43c5b3ff8e73ee261a61~mv2.jpg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/11062b_7c13d53ba87a43c5b3ff8e73ee261a61~mv2.jpg" alt="Residential construction site"></div><div class="service-body"><span class="small">DIRT WORK</span><h3>Excavation & Earthwork</h3><p>Full-service excavation solutions managed from start to finish, including trenching, grading prep, and material movement.</p><span class="text-link">Learn More →</span></div></a>
+    <a class="service service-link-card" href="service-site-preparation-development.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Site Preparation &amp; Development"><div class="service-media"><img src="https://static.wixstatic.com/media/11062b_6bf9e958d6984afc9cde5db837e7fac6~mv2.jpg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/11062b_6bf9e958d6984afc9cde5db837e7fac6~mv2.jpg" alt="Heavy machinery parking area"></div><div class="service-body"><span class="small">BUILD READY</span><h3>Site Preparation & Development</h3><p>Laying the groundwork for your development with clean, construction-ready site preparation.</p><span class="text-link">Learn More →</span></div></a>
+    <a class="service service-link-card" href="service-grading-drainage-solutions.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Grading &amp; Drainage Solutions"><div class="service-media"><img src="https://static.wixstatic.com/media/446b11_24587841bc124addba6b5f4b448d5b35~mv2.jpg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/446b11_24587841bc124addba6b5f4b448d5b35~mv2.jpg" alt="Grade work and drainage preparation"></div><div class="service-body"><span class="small">SITE STABILITY</span><h3>Grading & Drainage Solutions</h3><p>We manage grading and drainage work to support proper site leveling, water flow, and long-term stability.</p><span class="text-link">Learn More →</span></div></a>
+    <a class="service service-link-card" href="service-debris-removal-site-cleanup.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Debris Removal &amp; Site Cleanup"><div class="service-media"><img src="https://static.wixstatic.com/media/11062b_3dab78ba8acd46a78a4ea663002c964c~mv2.jpg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/11062b_3dab78ba8acd46a78a4ea663002c964c~mv2.jpg" alt="Recycling yard machinery"></div><div class="service-body"><span class="small">CLEAN FINISH</span><h3>Debris Removal & Site Cleanup</h3><p>Efficient removal of land clearing debris and construction waste, leaving your site clean and ready for the next phase.</p><span class="text-link">Learn More →</span></div></a>
+    <a class="service service-link-card" href="service-material-hauling-transport.html" onclick="window.location.href=this.href;return false;" aria-label="Learn more about Material Hauling &amp; Transport"><div class="service-media"><img src="https://static.wixstatic.com/media/11062b_b4fd5956141849c781c58d3c109c145c~mv2.jpeg/v1/fill/w_760,h_430,al_c,q_85,enc_avif,quality_auto/11062b_b4fd5956141849c781c58d3c109c145c~mv2.jpeg" alt="Material hauling and transport"></div><div class="service-body"><span class="small">MOVING MATERIAL</span><h3>Material Hauling & Transport</h3><p>Coordinated hauling support for dirt, rock, brush, debris, lumber, and project materials throughout Central Texas.</p><span class="text-link">Learn More →</span></div></a>
+  </div>  </div></div></section>
+  <section class="mission" id="mission"><div class="inner mission-grid"><div class="mission-img"></div><div><p class="eyebrow">Our Mission</p><h2>We prepare the ground for everything that comes next.</h2><p>I started Casmir Contracting Company | LLC to build a business grounded in hard work, discipline, and service. My experience as an Army Horizontal Construction Engineer shapes the dependable work, clear communication, and pride we bring to every project.</p><div class="pill-grid"><span>Reliable</span><span>Local</span><span>Site-Ready</span></div><div class="actions"><a class="btn btn-gold" href="#contact">Begin a Conversation</a><a class="btn btn-outline" href="#areas">Coverage Area</a></div></div></div></section>
+  <section class="areas" id="areas"><div class="inner"><div class="title-row"><div><p class="eyebrow">Service Area</p><h2>Central Texas roots. Regional reach.</h2></div><p>Providing dependable sitework services for residential and commercial projects throughout Bell, Williamson, and Travis counties.</p></div><div class="area-feature"><h3>Casmir Coverage</h3></div><div class="county-logo-carousel" aria-label="Cities and towns served carousel"><h3>Cities & Towns We Serve</h3><p class="county-kicker">Bell County service area</p><div class="county-logo-track active" data-county="Bell County" aria-hidden="false"><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-temple-transparent.png" alt="City of Temple logo"></div><span>Temple</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-belton-transparent.png" alt="City of Belton logo"></div><span>Belton</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-killeen-transparent.png" alt="City of Killeen logo"></div><span>Killeen</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-harker-heights-transparent.png" alt="Harker Heights logo"></div><span>Harker Heights</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-salado-transparent.png" alt="Visit Salado logo"></div><span>Salado</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-morgans-point-resort-transparent.png" alt="Morgan’s Point Resort logo"></div><span>Morgan’s Point Resort</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-nolanville-transparent.png" alt="City of Nolanville logo"></div><span>Nolanville</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-troy-transparent.png" alt="City of Troy logo"></div><span>Troy</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-temple-transparent.png" alt="City of Temple logo"></div><span>Temple</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-belton-transparent.png" alt="City of Belton logo"></div><span>Belton</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-killeen-transparent.png" alt="City of Killeen logo"></div><span>Killeen</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-harker-heights-transparent.png" alt="Harker Heights logo"></div><span>Harker Heights</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-salado-transparent.png" alt="Visit Salado logo"></div><span>Salado</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-morgans-point-resort-transparent.png" alt="Morgan’s Point Resort logo"></div><span>Morgan’s Point Resort</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-nolanville-transparent.png" alt="City of Nolanville logo"></div><span>Nolanville</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/bell-troy-transparent.png" alt="City of Troy logo"></div><span>Troy</span></div></div><div class="county-logo-track" data-county="Williamson County" aria-hidden="true"><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-georgetown-transparent.png" alt="City of Georgetown logo"></div><span>Georgetown</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-round-rock-transparent.png" alt="Round Rock Texas logo"></div><span>Round Rock</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-hutto-transparent.png" alt="City of Hutto logo"></div><span>Hutto</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-taylor-transparent.png" alt="City of Taylor logo"></div><span>Taylor</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-leander-transparent.png" alt="City of Leander logo"></div><span>Leander</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/williamson-cedar-park-transparent.png" alt="Cedar Park Texas logo"></div><span>Cedar Park</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-jarrell-transparent.png" alt="City of Jarrell logo"></div><span>Jarrell</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-liberty-hill-transparent.png" alt="Liberty Hill Texas logo"></div><span>Liberty Hill</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-florence-transparent.png" alt="City of Florence logo"></div><span>Florence</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-granger-transparent.png" alt="City of Granger logo"></div><span>Granger</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-georgetown-transparent.png" alt="City of Georgetown logo"></div><span>Georgetown</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-round-rock-transparent.png" alt="Round Rock Texas logo"></div><span>Round Rock</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-hutto-transparent.png" alt="City of Hutto logo"></div><span>Hutto</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-taylor-transparent.png" alt="City of Taylor logo"></div><span>Taylor</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-leander-transparent.png" alt="City of Leander logo"></div><span>Leander</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/williamson-cedar-park-transparent.png" alt="Cedar Park Texas logo"></div><span>Cedar Park</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-jarrell-transparent.png" alt="City of Jarrell logo"></div><span>Jarrell</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-liberty-hill-transparent.png" alt="Liberty Hill Texas logo"></div><span>Liberty Hill</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-florence-transparent.png" alt="City of Florence logo"></div><span>Florence</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/williamson-granger-transparent.png" alt="City of Granger logo"></div><span>Granger</span></div></div><div class="county-logo-track" data-county="Travis County" aria-hidden="true"><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos/travis-austin.svg" alt="City of Austin logo"></div><span>Austin</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-the-hills-transparent.png" alt="Village of The Hills logo"></div><span>The Hills</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-briarcliff-transparent.png" alt="Briarcliff Texas logo"></div><span>Briarcliff</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-jonestown-transparent.png" alt="City of Jonestown logo"></div><span>Jonestown</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-lago-vista-transparent.png" alt="City of Lago Vista logo"></div><span>Lago Vista</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-west-lake-hills-transparent.png" alt="City of West Lake Hills logo"></div><span>West Lake Hills</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-bee-cave-transparent.png" alt="Bee Cave Texas logo"></div><span>Bee Cave</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-lakeway-transparent.png" alt="Lakeway Texas logo"></div><span>Lakeway</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-manor-transparent.png" alt="Manor Texas logo"></div><span>Manor</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos/travis-austin.svg" alt="City of Austin logo"></div><span>Austin</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-the-hills-transparent.png" alt="Village of The Hills logo"></div><span>The Hills</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-briarcliff-transparent.png" alt="Briarcliff Texas logo"></div><span>Briarcliff</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-jonestown-transparent.png" alt="City of Jonestown logo"></div><span>Jonestown</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-lago-vista-transparent.png" alt="City of Lago Vista logo"></div><span>Lago Vista</span></div><div class="town-logo logo-image logo-wide"><div class="logo-frame"><img src="city-logos-transparent/travis-west-lake-hills-transparent.png" alt="City of West Lake Hills logo"></div><span>West Lake Hills</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-bee-cave-transparent.png" alt="Bee Cave Texas logo"></div><span>Bee Cave</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-lakeway-transparent.png" alt="Lakeway Texas logo"></div><span>Lakeway</span></div><div class="town-logo logo-image"><div class="logo-frame"><img src="city-logos-transparent/travis-manor-transparent.png" alt="Manor Texas logo"></div><span>Manor</span></div></div><div class="county-dot-labels" aria-label="County controls"><button class="county-tab active" type="button" aria-label="Show Bell County">Bell County</button><button class="county-tab" type="button" aria-label="Show Williamson County">Williamson County</button><button class="county-tab" type="button" aria-label="Show Travis County">Travis County</button></div></div></div></section><section class="cred"><div class="inner cred-grid"><div class="cred-copy"><p class="eyebrow">Client Reviews</p><h2>Dependable work, proven by the people we serve.</h2><div class="stars">★★★★★</div><p>Real client feedback highlighting Casmir’s professionalism, communication, attention to detail, and commitment to doing the job the right way.</p></div><div class="cred-panel"><div class="review-carousel" aria-label="Client review carousel"><article class="review-slide active" aria-hidden="false"><div class="review-card"><blockquote>“Did an excellent job from start to finish. They were professional, reliable, and easy to work with throughout the entire process. The quality of their work was outstanding, and they paid close attention to detail while making sure everything was completed the right way. I really appreciated their communication, honesty, and commitment to getting the job done well. I would highly recommend Casmir Contracting Company LLC to anyone looking for dependable, high-quality construction work.”</blockquote><cite>Hayden Eastwood</cite><div class="review-meta">Client Review</div></div></article><article class="review-slide" aria-hidden="true"><div class="review-card"><blockquote>“Since moving to Killeen, I've had the opportunity to know the owner of Casmir Contracting Company personally, and I can honestly say he is one of the most dependable, intelligent, and genuinely caring people I've met. As a fellow Army guy and experienced heavy machinery operator, his knowledge, discipline, and attention to detail are second to none. What really stands out is how seriously he takes safety and how much pride he puts into doing things the right way, not the easy way. He treats people with respect, communicates clearly, and genuinely cares about the quality of his work and the people he helps. If you want someone reliable, professional, hardworking, and trustworthy to handle your project, I can confidently recommend Casmir Contracting Company. Good people are hard to find, and this is a company built by one.”</blockquote><cite>AO</cite><div class="review-meta">Client Review</div></div></article><div class="review-controls" aria-label="Review controls"><button class="review-dot active" type="button" aria-label="Show Hayden Eastwood review"></button><button class="review-dot" type="button" aria-label="Show AO review"></button></div></div></div></div></section>
+  <section class="contact" id="contact"><div class="inner"><p class="eyebrow">Contact Us</p><h2>Request a project estimate</h2><p>Select the service you need and send the basics. For urgent needs, call or text (512) 967-3242.</p><form class="contact-card" id="estimateForm"><div class="form-row"><label>Name<input name="name" required></label><label>Email<input name="email" type="email"></label></div><div class="form-row"><label>Phone<input name="phone"></label><label>Project Location<input name="location" required placeholder="City / county / address"></label></div><label>Service Needed<select name="service" id="service" required><option value="">Choose a service</option><option>Land Clearing</option><option>Excavation & Earthwork</option><option>Site Preparation</option><option>Grading & Drainage</option><option>Debris Removal</option><option>Material Hauling</option></select></label><label>Brief Message<textarea name="message" placeholder="Tell us about acreage, access, timeline, photos available, or what needs clearing/prep."></textarea></label><button class="btn btn-gold" type="submit">Send Estimate Request</button><div class="status" id="formStatus"></div></form></div></section>
+  <footer><div class="foot"><div><img src="site-images/footer-lion-logo.png" alt="Casmir lion logo"><p><a class="btn btn-red" href="#contact">Get In Touch ↗</a></p></div><div><h3>Explore</h3><p><a href="#top">Home</a><br><a href="about-us.html">About Us</a><br><a href="#contact">Contact</a><br><a href="privacy-policy.html">Privacy Policy</a><br><a href="accessibility-statement.html">Accessibility Statement</a></p></div><div><h3>What We Do</h3><p>Land Clearing &amp; Vegetation Management<br>Excavation &amp; Earthwork<br>Site Preparation &amp; Development<br>Grading &amp; Drainage Solutions<br>Debris Removal &amp; Site Cleanup<br>Material Hauling &amp; Transport</p></div><div><h3>Contact</h3><p><a href="tel:+15129673242">Phone: (512) 967-3242</a><br><a href="mailto:casmircontractingcompany@gmail.com">casmircontractingcompany@gmail.com</a></p><div class="operation-hours"><h3>Hours Of Operations</h3><p>Monday - Friday: 9:00AM - 6:00PM<br>Saturday: 9:00AM - 7:00PM<br>Sunday: 1:30PM - 7:00PM</p></div></div></div><div class="foot copyright">© 2025 by Casmir Contracting Company | LCC. Veteran-Family Owned. Proudly Serving Our Community.</div></footer>
+</main>
+<script>
+
+const countyTracks=[...document.querySelectorAll('.county-logo-track')],countyTabs=[...document.querySelectorAll('.county-tab')],countyKicker=document.querySelector('.county-kicker');
+let countyIndex=0;
+function showCountyLogos(index){
+  if(!countyTracks.length)return;
+  countyIndex=(index+countyTracks.length)%countyTracks.length;
+  countyTracks.forEach((track,i)=>{track.classList.toggle('active',i===countyIndex);track.setAttribute('aria-hidden',i===countyIndex?'false':'true');});
+  countyTabs.forEach((tab,i)=>tab.classList.toggle('active',i===countyIndex));
+  if(countyKicker)countyKicker.textContent=`${countyTracks[countyIndex].dataset.county} service area`;
+}
+countyTabs.forEach((tab,i)=>tab.addEventListener('click',()=>showCountyLogos(i)));
+if(countyTracks.length){showCountyLogos(0);setInterval(()=>showCountyLogos(countyIndex+1),52000);}
+const reviewSlides=[...document.querySelectorAll('.review-slide')],reviewDots=[...document.querySelectorAll('.review-dot')];
+let reviewIndex=0;
+function showReview(index){
+  if(!reviewSlides.length)return;
+  reviewIndex=(index+reviewSlides.length)%reviewSlides.length;
+  reviewSlides.forEach((slide,i)=>{slide.classList.toggle('active',i===reviewIndex);slide.setAttribute('aria-hidden',i===reviewIndex?'false':'true');});
+  reviewDots.forEach((dot,i)=>dot.classList.toggle('active',i===reviewIndex));
+}
+reviewDots.forEach((dot,i)=>dot.addEventListener('click',()=>showReview(i)));
+if(reviewSlides.length>1)setInterval(()=>showReview(reviewIndex+1),7000);
+const form=document.getElementById('estimateForm'),statusEl=document.getElementById('formStatus'),service=document.getElementById('service');
+document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{service.value=a.getAttribute('data-service')||'';}));
+form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form),name=String(d.get('name')||'').trim(),email=String(d.get('email')||'').trim(),phone=String(d.get('phone')||'').trim(),loc=String(d.get('location')||'').trim(),svc=String(d.get('service')||'').trim(),msg=String(d.get('message')||'').trim();if(!name||!loc||!svc||(!email&&!phone)){statusEl.textContent='Please add your name, project location, service needed, and either email or phone.';statusEl.style.color='#ffb4a8';return;}const subject=encodeURIComponent('Casmir Website Estimate Request'),body=encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject Location: ${loc}\nService Needed: ${svc}\n\nMessage:\n${msg}`);statusEl.textContent='Opening your email app with the estimate request...';statusEl.style.color='#d7b56d';window.location.href=`mailto:casmircontractingcompany@gmail.com?subject=${subject}&body=${body}`;});
+</script>
+</body>
+</html>
